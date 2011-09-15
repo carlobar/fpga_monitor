@@ -1,0 +1,6 @@
+FPGA monitor is a signal viewer implemented in Verilog.
+
+Directory structure:
+/rtl		Main entity and ucf file.
+/cores		Verilog sources used by main entity
+/test		Test files of entity.
