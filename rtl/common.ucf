@@ -1,0 +1,71 @@
+##########################################################################
+# Target Board: Xilinx Spartan-3E Starter kit Board                     ##
+# Family: spartan3e                                                     ##
+# Device: XC3S500E                                                      ##
+# Package: FG320                                                        ##
+# Speed Grade: -5                                                       ##
+##########################################################################
+
+# ==== Clock inputs (CLK) ====
+NET "clk_in" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+NET "clk_in" PERIOD = 20ns HIGH 50%;
+NET "clk_in" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "sampling/clkgen_sample.CLK0" CLOCK_DEDICATED_ROUTE = FALSE;
+
+
+
+
+# ==== Pushbuttons ====
+
+NET "reset_in"	LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "btn(0)"	LOC = "H13" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "btn(1)"	LOC = "V4" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "btn(2)"	LOC = "D18" | IOSTANDARD = LVTTL | PULLDOWN;
+
+# ---------- rotatory
+NET "rot(0)" LOC = "K18" | IOSTANDARD = LVTTL | PULLUP ;
+NET "rot(1)" LOC = "G18" | IOSTANDARD = LVTTL | PULLUP ;
+
+
+
+# ==== Discrete LEDs ====
+#NET "led(7)" LOC = "F9" | IOSTANDARD = LVTTL | SLEW =  SLOW | DRIVE = 8  | PULLUP;
+#NET "led(6)" LOC = "E9" | IOSTANDARD = LVTTL | SLEW =  SLOW | DRIVE = 8 ;
+#NET "led(5)" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+#NET "led(4)" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "led(3)" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "led(2)" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "led(1)" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "led(0)" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+# ==== DIP Switches ====
+NET "sw<0>" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP ;
+NET "sw<1>" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP ;
+NET "sw<2>" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP ;
+NET "sw<3>" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP ;
+
+
+#===== LCD ================================
+NET "e"   LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "rs"  LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "rw"  LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+# The LCD four-bit data interface is shared with the StrataFlash.
+NET "data_io<0>" LOC  = "R15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "data_io<1>" LOC  = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "data_io<2>" LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "data_io<3>" LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+#=========== VGA =================
+NET rgb(2)  LOC = H14 | IOSTANDARD = LVCMOS33;
+NET rgb(1)  LOC = H15 | IOSTANDARD = LVCMOS33;
+NET rgb(0)  LOC = G15 | IOSTANDARD = LVCMOS33;
+NET vga_hsync  LOC = F15 | IOSTANDARD = LVCMOS33;
+NET vga_vsync  LOC = F14 | IOSTANDARD = LVCMOS33;
+
+
+
+##########################################################################
+########################################################################
+###########################################################################3
+
